@@ -1,0 +1,40 @@
+$(function() {
+	$(document).ready(function(){
+		$('.autoplay').owlCarousel({
+		    loop:true,
+		    margin:0,
+		    nav:false,
+		    autoplay:true,
+		    autoplayTimeout:2000,
+		    responsive:{
+		        0:{
+		            items:2,
+		        },
+		        480:{
+		            items:3,
+		        },
+		        768:{
+		            items:4,
+		        },
+		        992:{
+		            items:5,
+		        }
+		    }
+		});
+		$('.loop').owlCarousel({
+			loop:true,
+			margin:10,
+		    center: true,
+		    items:2,
+		    nav:false
+		});
+		$('.owl-carousel').owlCarousel({
+		    loop:true,
+		    margin:10,
+		    nav:true,
+		    navText:'',
+		    animateOut: 'fadeOut',
+		    items:1
+		});
+	});
+});

@@ -1,0 +1,64 @@
+@import "bourbon"
+@import "../vars"
+
+.present
+	background: #fff
+	color: #000
+	text-align: center
+	padding: 60px 0
+	@media only screen and (max-width : 768px)
+		padding: 40px 0
+
+	&__h3
+		font-size: 40px
+		font-weight: 700
+		position: relative
+		line-height: 1.4
+		margin: 0
+		margin-bottom: 20px
+		@media only screen and (max-width : 1200px)
+			font-size: 33px;
+		@media only screen and (max-width : 992px)
+			font-size: 26px;
+		@media only screen and (max-width : 768px)
+			font-size: 19px;
+
+	&__text
+		font-size: 19px
+		line-height: 1.4
+		padding: 0
+		margin: 20px auto 30px
+		width: 530px
+		@media only screen and (max-width : 768px)
+			font-size: 13px
+			width: 290px
+		&--accent
+			color: $accent
+
+	&__btn
+		background-color: transparent
+		border: 3px solid
+		border-radius: 50px
+		min-width: 200px
+		min-height: 55px
+		display: inline-block
+		font-size: 14px
+		font-weight: 900
+		text-align: center
+		line-height: 49px
+		text-transform: uppercase
+		&:hover
+			opacity: 0.9
+			text-decoration: none
+		&:focus
+			text-decoration: inherit
+			outline: red
+		&--red
+			border-color: red
+			color: red
+			margin-top: 4px
+			&:hover
+				text-decoration: none
+				color: red
+			&:focus
+				color: red

@@ -1,0 +1,40 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+
+@import "media"
+@import "blocks/statistics"
+@import "blocks/socials"
+@import "blocks/slider"
+@import "blocks/feachers"
+@import "blocks/volonters"
+@import "blocks/offers"
+@import "blocks/photos"
+@import "blocks/purpose"
+@import "blocks/present"
+@import "blocks/sertificates"
+@import "blocks/sponsors"
+@import "blocks/footer-page"
+
+.parallax-layer
+	position: absolute
+
+#parallax1
+	position: relative
+	overflow: hidden
+	@media only screen and (max-width : 992px)
+		height: 650px
+
+	@media only screen and (max-width : 768px)
+		height: 950px
+
+	@media only screen and (max-width : 480px)
+		height: 700px
+
+.loop
+	.owl-item
+		img
+			display: inline-block
+			width: initial
+			@media only screen and (max-width : 480px)
+				height: 125px;

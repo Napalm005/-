@@ -1,0 +1,40 @@
+@import "bourbon"
+@import "../vars"
+
+.sertificates
+	padding: 60px 0
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+	@media only screen and (max-width : 768px)
+		padding: 40px 0
+
+	&__left
+		padding: 60px 0
+		@media only screen and (max-width : 992px)
+			padding: 50px 0
+		@media only screen and (max-width : 768px)
+			padding: 20px 0 0
+
+	&__text
+		font-size: 19px
+		line-height: 1.4
+		padding: 0
+		margin: 20px auto 30px
+		@media only screen and (max-width : 992px)
+			font-size: 14px
+		@media only screen and (max-width : 768px)
+			font-size: 13px
+			width: 75%
+			margin: 0 auto
+		@media only screen and (max-width : 480px)
+			font-size: 10px
+			width: 290px
+			margin: 0 auto
+		&--accent
+			color: $accent
+
+	&__img
+		margin: 0 auto
+		@media only screen and (max-width : 768px)
+			margin: 0 auto 20px
+			width: 75%
+

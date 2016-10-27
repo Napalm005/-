@@ -1,0 +1,48 @@
+@import "bourbon"
+@import "../vars"
+
+.footer-page
+	padding: 20px 0
+	background: #fff
+	color: #000
+	@media only screen and (max-width : 768px)
+		text-align: center
+
+	&__text
+		margin: 0 auto
+		font-size: 18px
+		font-weight: 300
+		position: relative
+		margin-bottom: 50px
+		@media only screen and (max-width : 1200px)
+			font-size: 14px
+		@media only screen and (max-width : 992px)
+			margin-bottom: 40px
+			font-size: 15px
+		@media only screen and (max-width : 768px)
+			font-size: 14px
+	&__developer
+		padding-top: 10px
+		@media only screen and (max-width : 992px)
+			padding-top: 20px
+
+	&__item
+		padding-top: 66px
+		@media only screen and (max-width : 768px)
+			padding-top: 0
+	img
+		margin: 0 auto
+		margin-left: 10px;
+		&:first-of-type
+			margin-left: 0
+		&:last-child
+			margin-left: 0
+
+	.pay
+		padding-left: 50px
+		@media only screen and (max-width : 1200px)
+			padding-left: 10px
+		@media only screen and (max-width : 768px)
+			padding-left: 0
+
+

@@ -1,0 +1,151 @@
+@import "bourbon"
+@import "../vars"
+
+.offers
+	padding-top: 70px
+
+	&__right
+		padding-bottom: 70px
+		PADDING-TOP: 30px
+		@media only screen and (max-width : 1200px)
+			font-size: 16px
+		@media only screen and (max-width : 992px)
+			padding-bottom: 50px
+		@media only screen and (max-width : 768px)
+			padding-bottom: 40px
+
+		img
+			margin-left: auto
+			width: 68%
+			@media only screen and (max-width : 1200px)
+				width: 82%
+			@media only screen and (max-width : 992px)
+				transform: rotate(90deg);
+				width: 40%;
+				margin: -30% auto;
+			@media only screen and (max-width : 480px)
+				margin: -35% auto;
+
+	&__h3
+		font-size: 38px
+		margin: 0
+		margin-bottom: 40px
+		line-height: 1.3
+		position: relative
+		@media only screen and (max-width : 1200px)
+			font-size: 30px
+		@media only screen and (max-width : 992px)
+			font-size: 24px
+		@media only screen and (max-width : 768px)
+			font-size: 20px
+		@media only screen and (max-width : 480px)
+			font-size: 16px
+			margin-bottom: 25px
+
+	&__h3-accent
+		color: $red
+
+	&__h4
+		font-size: 24px
+		font-weight: 900
+		@media only screen and (max-width : 1200px)
+			font-size: 20px
+		@media only screen and (max-width : 480px)
+			font-size: 14px
+
+	&__car
+		height: 66px;
+
+	&__text
+		font-size: 19px
+		line-height: 1.4
+		padding: 0
+		margin: 0
+		@media only screen and (max-width : 1200px)
+			font-size: 16px
+		@media only screen and (max-width : 480px)
+			font-size: 10px
+		&--accent
+			color: $accent
+
+	&__item
+		margin-bottom: 80px
+		img
+			max-width: 185px;
+			margin: 0 auto;
+		@media only screen and (max-width : 1200px)
+			text-align: center
+			margin: 40px 0
+
+	&__btn
+		background-color: transparent
+		border: 3px solid
+		border-radius: 50px
+		min-width: 200px
+		min-height: 55px
+		display: inline-block
+		font-size: 14px
+		font-weight: 900
+		text-align: center
+		line-height: 49px
+		text-transform: uppercase
+		&:hover
+			opacity: 0.9
+			text-decoration: none
+		&:focus
+			text-decoration: inherit
+			outline: red
+		&--red
+			border-color: red
+			color: red
+			margin-top: 4px
+			&:hover
+				text-decoration: none
+				color: red
+			&:focus
+				color: red
+
+	&__left
+
+	&__small
+		display: inline-block
+		margin-top: 20px
+		margin: 0
+		padding-left: 20px
+		font-weight: 300
+		font-size: 14px
+		padding-top: 15px
+		&--padding-non
+			padding-top: 0
+			@media only screen and (max-width : 1200px)
+				padding-top: 25px
+		@media only screen and (max-width : 1200px)
+			padding-top: 25px
+			width: 480px
+			font-size: 12px
+		@media only screen and (max-width : 768px)
+			width: 290px;
+
+		&--regular
+			font-weight: 400
+			@media only screen and (max-width : 1200px)
+				padding-top: 10px
+			@media only screen and (max-width : 768px)
+				text-align: left
+				margin-left: -70px;
+			@media only screen and (max-width : 480px)
+				text-align: left
+				font-size: 10px;
+				margin-left: -52px;
+				padding-left: 0
+				width: initial
+				padding-top: 0
+
+	&__small-accent
+		color: $accent
+		text-transform: uppercase
+
+	.socials
+		@media only screen and (max-width : 480px)
+			text-align: left;
+
