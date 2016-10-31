@@ -55,7 +55,8 @@ gulp.task('libs', function() {
     'app/libs/jquery/dist/jquery-3.1.1.min.js',
     'app/libs/jparallax/js/jquery.parallax.js',
     'app/libs/owl.carousel/dist/owl.carousel.min.js',
-    'app/libs/wow.min.js'
+    'app/libs/wow.min.js',
+    'app/libs/countup/jquery.spincrement.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
