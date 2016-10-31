@@ -2,20 +2,16 @@
 @import "vars"
 
 *::-webkit-input-placeholder
-	color: #fff
-	opacity: 0.5
+	color: rgba(255, 255, 255, 0.6)
 
 *:-moz-placeholder
-	color: #fff
-	opacity: 0.5
+	color: rgba(255, 255, 255, 0.6)
 
 *::-moz-placeholder
-	color: #fff
-	opacity: 0.5
+	color: rgba(255, 255, 255, 0.6)
 
 *:-ms-input-placeholder
-	color: #fff
-	opacity: 0.5
+	color: rgba(255, 255, 255, 0.6)
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -43,16 +39,21 @@ body
 		height: 5700px
 	@media only screen and (max-width : 768px)
 		height: 5300px
+			background-image: linear-gradient(360deg,#494c95 0,#000 0,#000 73%,#800 85%,red 100%)
 	@media only screen and (max-width : 480px)
 		height: 5000px
 
 input
 	background-color: red
+	color: #fff
 	border: 3px solid #fff
 	border-radius: 50px
 	padding: 0px 20px
 	height: 34px
 	width: 220px
+	outline: none
+	&:focus
+		outline: none
 	@media only screen and (max-width : 480px)
 		border: 2px solid #fff;
 		padding: 0 15px;
@@ -60,6 +61,10 @@ input
 		width: 146px;
 		font-size: 12px;
 
+button
+	outline: none
+	&:focus
+		outline: none
 
 
 

@@ -15,6 +15,11 @@
 @import "blocks/sertificates"
 @import "blocks/sponsors"
 @import "blocks/footer-page"
+@import "blocks/popup"
+@import "blocks/form"
+@import "blocks/number"
+@import "blocks/checkbox-block"
+@import "blocks/checkbox"
 
 .parallax-layer
 	position: absolute
@@ -26,7 +31,7 @@
 		height: 650px
 
 	@media only screen and (max-width : 768px)
-		height: 950px
+		height: 900px
 
 	@media only screen and (max-width : 480px)
 		height: 700px
@@ -35,6 +40,6 @@
 	.owl-item
 		img
 			display: inline-block
-			width: initial
+			width: inherit
 			@media only screen and (max-width : 480px)
 				height: 125px;

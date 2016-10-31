@@ -1,0 +1,67 @@
+@import "bourbon"
+@import "../vars"
+
+.checkbox
+	position: relative;
+	padding-left: 70px;
+	display: block
+	cursor: pointer;
+
+	&__indicator
+		position: absolute;
+		left: 0;
+		top: 5px;
+		display: inline-block;
+		vertical-align: middle;
+		background-color: transparent;
+		border: 3px solid #f28f40;
+		border-radius: 50px;
+		padding: 0 25px;
+		height: 40px;
+		@media only screen and (max-width : 768px)
+			top: 0
+		@media only screen and (max-width : 480px)
+			top: 5px
+
+		&:after
+			font: 0/0 sans-serif;
+			text-shadow: none;
+			color: transparent;
+			content: '';
+			display: block;
+			position: absolute;
+			border-left: 4px solid #f28f40;
+			border-bottom: 4px solid #f28f40;
+			top: 8px;
+			left: 15px;
+			width: 24px;
+			height: 12px;
+			transform: rotate(-45deg);
+			margin-left: auto;
+			opacity: 0;
+
+		&:active
+			opacity: 1;
+			transition: 0.3s ease all;
+
+	&:hover &__indicator
+		transition: 0.3s ease all;
+
+
+	&:active &__indicator
+		transition: 0.3s ease all;
+
+
+	&:active &__indicator:after
+		opacity: 1;
+		transition: 0.3s ease all;
+
+
+	input
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+		width: 0;
+
+		&:checked ~ .checkbox__indicator:after
+			opacity: 1;

@@ -52,9 +52,10 @@ gulp.task('headersass', function() {
 
 gulp.task('libs', function() {
   return gulp.src([
-    'app/libs/jquery/dist/jquery.min.js',
-    'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-    'app/libs/owl.carousel/dist/owl.carousel.min.js'
+    'app/libs/jquery/dist/jquery-3.1.1.min.js',
+    'app/libs/jparallax/js/jquery.parallax.js',
+    'app/libs/owl.carousel/dist/owl.carousel.min.js',
+    'app/libs/wow.min.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

@@ -1,0 +1,166 @@
+@import "bourbon"
+@import "../vars"
+
+.popup
+	position: fixed;
+	visibility: hidden;
+	top: 0
+	left: 0
+	color: #000
+	text-align: center
+	height: 110vh
+	width: 100%
+	z-index: 100;
+	background: #fff
+	transition: all 0.25s ease
+	opacity: 0
+
+	&__img
+		@media only screen and (max-width : 768px)
+			width: 250px;
+
+	&__wrap
+		position: absolute;
+		top: 45%;
+		transform: translateY(-50%) translateX(-50%);
+		left: 50%;
+		width: 100%;
+
+	.container
+		position: relative
+		height: 100%
+
+	&--show
+		visibility: visible;
+		opacity: 1
+
+	&__close
+		display: block
+		background: url('../img/popup/cross.svg') no-repeat
+		position: absolute
+		right: 0
+		top: 0
+		width: 50px
+		height: 50px
+		border: 0;
+		outline: 0;
+		font-size: 0;
+		cursor: pointer;
+		z-index: 10;
+		@media only screen and (max-width : 768px)
+			position: relative
+			margin: 0 auto;
+			margin-bottom: 30px;
+
+	&__h3
+		font-size: 38px
+		margin: 0
+		margin-bottom: 20px
+		line-height: 1.1
+		position: relative
+		@media only screen and (max-width : 982px)
+			font-size: 30px
+		@media only screen and (max-width : 768px)
+			font-size: 18px
+			margin-bottom: 30px
+		&--margin-non
+			margin-bottom: 10px
+			color: $accent
+
+	&__small-text
+		width: 550px
+		font-size: 16px
+		display: inline-block;
+		margin-bottom: 20px
+		@media only screen and (max-width : 768px)
+			width: 100%;
+			font-size: 11px;
+
+	&__text
+		width: 550px;
+		margin: 0 auto;
+		margin-bottom: 20px
+		@media only screen and (max-width : 768px)
+			width: 440px;
+			font-size: 14px;
+		@media only screen and (max-width : 480px)
+			width: 100%
+			font-size: 11px;
+
+	&__email, &__textarea
+		background-color: transparent
+		border: 3px solid $accent
+		border-radius: 50px
+		display: block
+		font-size: 16px
+		margin: 0 auto
+		color: #000
+		padding: 10px 25px
+		min-width: 600px;
+		min-height: 45px;
+		line-height: 1.3;
+		margin-bottom: 20px
+
+		&::-webkit-input-placeholder
+			color: rgb(0, 0, 0)
+
+		&:-moz-placeholder
+			color: rgb(0, 0, 0)
+
+		&::-moz-placeholder
+			color: rgb(0, 0, 0)
+
+		&:-ms-input-placeholder
+			color: rgb(0, 0, 0)
+
+		@media only screen and (max-width : 768px)
+			min-width: 100%;
+
+	&__textarea
+		border-radius: 25px
+		@media only screen and (max-width : 768px)
+			height: 120px
+
+
+
+	&__btn
+		padding: 0
+		background-color: transparent
+		border: 3px solid $accent
+		border-radius: 50px
+		min-width: 200px
+		min-height: 55px
+		display: block
+		font-size: 14px
+		font-weight: 900
+		text-align: center
+		margin: 0 auto
+		color: $accent
+		line-height: 49px
+		text-transform: uppercase
+		transition: all 0.3s ease
+		&:hover
+			color: #000
+			text-decoration: none
+		&:active
+			color: #000
+		&:focus
+			text-decoration: inherit
+			outline: red
+		&--orange
+			border-color: $accent
+			color: $accent
+			margin-top: 4px
+			&:focus
+				color: $accent
+
+
+#quantity
+	color: $accent
+	font-weight: 700
+	font-size: 22px
+	padding: 0 5px
+
+	@media only screen and (max-width : 768px)
+		font-size: 16px
+
