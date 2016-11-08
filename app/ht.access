@@ -6,6 +6,8 @@ AddType application/x-font-ttf .ttf
 AddType application/x-font-opentype .otf
 AddType application/x-font-woff .woff
 AddType image/svg+xml .svg
+AddType image/svg+xml svgz
+AddEncoding x-gzip .svgz
 
 # Compress compressible fonts
 AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml

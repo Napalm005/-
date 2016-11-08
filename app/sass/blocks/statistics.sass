@@ -13,49 +13,97 @@
 		background-size: 304%
 		background: url(../img/statistics/bg-statistics.png) -810px 0 no-repeat
 
+	.container
+		position: relative
+
+	&__marker
+		display: block
+		background: url('../img/statistics/bg-mark.png') no-repeat
+		position: absolute
+		width: 100px
+		height: 71px
+
+		&--1
+			top: 520px-50px;
+			right: 145px-90px;
+		&--2
+			top: 560px-50px;
+			right: 1111px-90px;
+		&--3
+			top: 410px-50px;
+			right: 930px-90px;
+		&--4
+			top: 420px-50px;
+			right: 495px-90px;
+		&--5
+			top: 445px-50px;
+			right: 257px-90px;
+		&--6
+			top: 640px-50px;
+			right: 65px-90px;
+		&--7
+			top: 690px-50px;
+			right: 1000px-90px;
+
+		@media only screen and (max-width : 1200px)
+			&--1
+				top: 520px-50px-40px;
+			&--2
+				top: 560px-50px-35px;
+				right: 830px;
+			&--3
+				top: 325px;
+				right: 640px;
+			&--4
+				top: 325px;
+				right: 310px;
+			&--5
+				top: 445px-50px-40px;
+			&--6
+				top: 640px-50px-40px;
+			&--7
+				top: 600px;
+				right: 750px;
+
+
+		@media only screen and (max-width : 992px)
+			&--1
+				top: 455px;
+				right: 450px;
+			&--2
+				display: none
+			&--3
+				display: none
+			&--4
+				top: 260px;
+				right: 430px;
+			&--5
+				top: 285px;
+			&--6
+				top: 640px-50px-40px-100px;
+			&--7
+				top: 340px;
+				right: 610px;
+		@media only screen and (max-width : 768px)
+			display: none
+
 
 	&__title
 		font-size: 90px
 		text-align: center
-		font-weight: 700
+		font-family: rubikBold
 		line-height: 1.1
 		margin-bottom: 30px
 		position: relative
 		margin-top: 40px
-		&:after
-			content: ''
-			display: block
-			background: url('../img/statistics/bg-mark.png') no-repeat
-			position: absolute
-			top: 428px
-			right: 38px
-			width: 100px
-			height: 71px
-		&:before
-			content: ''
-			display: block
-			background: url('../img/statistics/bg-mark.png') no-repeat
-			position: absolute
-			left: 25px
-			top: 470px
-			width: 100px
-			height: 71px
 		@media only screen and (max-width : 1200px)
 			margin-top: 0
 		@media only screen and (max-width : 992px)
 			font-size: 65px
 			margin-bottom: 40px
-			&:before
-				top: 340px
-			&:after
-				display: none
 		@media only screen and (max-width : 768px)
 			margin-bottom: 24px;
 			font-size: 52px
-			&:before
-				display: none
-			&:after
-				display: none
 		@media only screen and (max-width : 480px)
 			font-size: 78px
 			line-height: 46px
@@ -69,7 +117,7 @@
 	&__title-add
 		font-size: 32px
 		display: block
-		font-weight: 300
+		font-family: rubikLight
 		@media only screen and (max-width : 992px)
 			font-size: 24px
 		@media only screen and (max-width : 768px)
@@ -83,35 +131,8 @@
 	&__items
 		position: relative
 		margin-bottom: 75px
-		&:after
-			content: ''
-			display: block
-			background: url('../img/statistics/bg-mark.png') no-repeat
-			position: absolute
-			top: 160px
-			left: 215px
-			width: 100px
-			height: 71px
-		&:before
-			content: ''
-			display: block
-			background: url('../img/statistics/bg-mark.png') no-repeat
-			position: absolute
-			top: 190px
-			right: 155px
-			width: 100px
-			height: 71px
-		@media only screen and (max-width : 992px)
-			&:before
-				top: 140px
-			&:after
-				top: 120px
 		@media only screen and (max-width : 768px)
 			margin-bottom: 35px
-			&:before
-				display: none
-			&:after
-				display: none
 
 	&__item
 		text-align: center
@@ -123,7 +144,7 @@
 
 	&__number
 		font-size: 90px
-		font-weight: 700
+		font-family: rubikBold
 		color: $accent
 		line-height: 1.2
 		@media only screen and (max-width : 992px)
@@ -134,7 +155,7 @@
 		width: 190px
 		margin: 0 auto
 		font-size: 14px
-		font-weight: 300
+		font-family: rubikLight
 		@media only screen and (max-width : 992px)
 			text-align: center;
 			font-size: 12px;
@@ -148,64 +169,23 @@
 		width: 500px
 		margin: 0 auto
 		font-size: 22px
-		font-weight: 300
+		font-family: rubikLight
 		position: relative
-		&:after
-			content: ''
-			display: block
-			background: url('../img/statistics/bg-mark.png') no-repeat
-			position: absolute
-			top: -85px
-			right: 75px
-			width: 100px
-			height: 71px
 		@media only screen and (max-width : 992px)
 			font-size: 18px;
-			&:after
-				display: none
 		@media only screen and (max-width : 768px)
 			width: 100%
 
 	&__h3
 		color: $accent
 		font-size: 44px
-		font-weight: 700
+		font-family: rubikBold
 		text-align: center
 		position: relative
 		line-height: 1.4
-		&:after
-			content: ''
-			display: block
-			background: url('../img/statistics/bg-mark.png') no-repeat
-			position: absolute
-			top: -10px
-			right: -40px
-			width: 100px
-			height: 71px
-		&:before
-			content: ''
-			display: block;
-			background: url('../img/statistics/bg-mark.png') no-repeat
-			position: absolute
-			left: 150px
-			top: 35px
-			width: 100px
-			height: 71px
-		@media only screen and (max-width : 1200px)
-			&:before
-				left: 105px
 		@media only screen and (max-width : 992px)
 			font-size: 38px;
 			margin-top: 60px;
-			&:before
-				left: 177px
-				top: -55px
-			&:after
-				top: -60px
 		@media only screen and (max-width : 768px)
 			font-size: 30px;
-			&:before
-				display: none
-			&:after
-				display: none
 

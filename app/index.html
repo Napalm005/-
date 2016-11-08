@@ -10,8 +10,6 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
-	<link href="libs/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
 
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
@@ -30,6 +28,13 @@
 	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
 	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
 
+	<!-- Load Fonts CSS Start -->
+	<script>
+		loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+		// loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+	</script>
+	<!-- Load Fonts CSS End -->
+
 	<!-- Load Custom CSS Start -->
 	<!--<Deject>--><script>loadCSS( "header.min.css?ver=1.0.0", false, "all" );</script><!--</Deject>-->
 	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
@@ -37,6 +42,7 @@
 
 	<!-- Load Custom CSS Compiled without JS Start -->
 	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</noscript>
 	<!-- Load Custom CSS Compiled without JS End -->
@@ -152,6 +158,13 @@
 			</div>
 			<p class="statistics__big-text">Большую часть бычков люди выбрасывают на улицы, совсем не задумываясь об окружающей среде и мусоре вокруг себя! </p>
 			<h3 class="statistics__h3">Вместе мы это остановим!</h3>
+			<div class="statistics__marker  statistics__marker--1  wow zoomIn" data-wow-offset="200"></div>
+			<div class="statistics__marker  statistics__marker--2  wow zoomIn" data-wow-delay="0.1s" data-wow-offset="100"></div>
+			<div class="statistics__marker  statistics__marker--3  wow zoomIn" data-wow-delay="1.7s" data-wow-offset="200"></div>
+			<div class="statistics__marker  statistics__marker--4  wow zoomIn" data-wow-delay="0.3s" data-wow-offset="200"></div>
+			<div class="statistics__marker  statistics__marker--5  wow zoomIn" data-wow-delay="0.9s" data-wow-offset="200"></div>
+			<div class="statistics__marker  statistics__marker--6  wow zoomIn" data-wow-delay="1.4s"></div>
+			<div class="statistics__marker  statistics__marker--7  wow zoomIn" data-wow-delay="0.6s"></div>
 		</div>
 	</section>
 
@@ -299,7 +312,7 @@
 						<div class="offers__item">
 							<div class="row">
 								<div class="col-lg-4">
-									<img class="offers__car img-responsive slideInLeft wow" src="img/offers/car.svg" alt="">
+									<img class="offers__car img-responsive" src="img/offers/car.svg" alt="">
 								</div>
 								<div class="col-lg-8">
 									<small class="offers__small">Карманную пепельницу можно будет забрать в одном из пунктов выдачи или оформить доставку почтой России</small>
@@ -487,13 +500,13 @@
 		<div class="popup__wrap">
 			<div class="container">
 				<button class="popup__close" title="Закрыть">Закрыть</button>
-				<form action="" class="popup__form  form">
+				<form class="popup__form  form">
 					<h3 class="popup__h3">Спасибо за заботу о чистоте улиц <br class="hidden-xs">
 					и экологию нашей с Вами страны!</h3>
 					<p class="popup__text">В данный момент мы проверяем насколько люди нашей страны готовы сделать шаг на пути к чистым улицам и отсутствию бычков. <br class="visible-xs hidden-sm">
 					 Оставьте Ваш e-mail и Вы первыми узнаете когда наш проект заработает в полную силу!</p>
 					<input class="popup__email" type="text" placeholder="E-mail">
-					<textarea class="popup__textarea" name="" id="" cols="5" rows="10" placeholder="Напишите нам что-нибудь :)"></textarea>
+					<textarea class="popup__textarea" name="message" cols="5" rows="10" placeholder="Напишите нам что-нибудь :)"></textarea>
 					<input id="send" class="popup__btn  popup__btn--orange" type="submit" value="Отправить">
 				</form>
 			</div>
@@ -504,7 +517,7 @@
 		<div class="popup__wrap">
 			<div class="container">
 				<button class="popup__close" title="Закрыть">Закрыть</button>
-				<form action="" class="popup__form  form">
+				<form class="popup__form  form">
 					<h3 class="popup__h3">Сколько пепельниц Вы купите себе <br class="hidden-xs">
 					и своим знакомым?</h3>
 					<img class="popup__img" src="img/popup/ashtray-popup.png" alt="">

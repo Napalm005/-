@@ -16,6 +16,7 @@ var gulp           = require('gulp'),
     bourbon        = require('node-bourbon'),
     ftp            = require('vinyl-ftp'),
     notify         = require("gulp-notify");
+    svgoPlugins    = require("imagemin-svgo");
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -104,8 +105,6 @@ gulp.task('build', ['removedist', 'buildhtml', 'imagemin', 'sass', 'libs'], func
   ]).pipe(gulp.dest('dist'));
 
   var buildFonts = gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
-
-  var buildJs = gulp.src('app/js/**/*').pipe(gulp.dest('dist/js'));
 
 });
 
